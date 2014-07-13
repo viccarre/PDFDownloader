@@ -21,6 +21,7 @@
 		5B0B91AE1973281800336B8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B91901973281800336B8B /* UIKit.framework */; };
 		5B0B91B61973281800336B8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B91B41973281800336B8B /* InfoPlist.strings */; };
 		5B0B91B81973281800336B8B /* PDFDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91B71973281800336B8B /* PDFDownloaderTests.m */; };
+		5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91C2197328B400336B8B /* BrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		5B0B91B31973281800336B8B /* PDFDownloaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFDownloaderTests-Info.plist"; sourceTree = "<group>"; };
 		5B0B91B51973281800336B8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5B0B91B71973281800336B8B /* PDFDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFDownloaderTests.m; sourceTree = "<group>"; };
+		5B0B91C1197328B400336B8B /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		5B0B91C2197328B400336B8B /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				5B0B919B1973281800336B8B /* AppDelegate.h */,
 				5B0B919C1973281800336B8B /* AppDelegate.m */,
 				5B0B919E1973281800336B8B /* Main.storyboard */,
+				5B0B91C1197328B400336B8B /* BrowserViewController.h */,
+				5B0B91C2197328B400336B8B /* BrowserViewController.m */,
 				5B0B91A11973281800336B8B /* ViewController.h */,
 				5B0B91A21973281800336B8B /* ViewController.m */,
 				5B0B91A41973281800336B8B /* Images.xcassets */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0B91A31973281800336B8B /* ViewController.m in Sources */,
+				5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */,
 				5B0B919D1973281800336B8B /* AppDelegate.m in Sources */,
 				5B0B91991973281800336B8B /* main.m in Sources */,
 			);
