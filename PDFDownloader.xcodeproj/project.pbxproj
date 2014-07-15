@@ -22,6 +22,8 @@
 		5B0B91B61973281800336B8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B91B41973281800336B8B /* InfoPlist.strings */; };
 		5B0B91B81973281800336B8B /* PDFDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91B71973281800336B8B /* PDFDownloaderTests.m */; };
 		5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91C2197328B400336B8B /* BrowserViewController.m */; };
+		5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6AE1974D0370091078D /* PDFViewController.m */; };
+		5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		5B0B91B71973281800336B8B /* PDFDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFDownloaderTests.m; sourceTree = "<group>"; };
 		5B0B91C1197328B400336B8B /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		5B0B91C2197328B400336B8B /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		5B97A6AD1974D0370091078D /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
+		5B97A6AE1974D0370091078D /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
+		5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFListTableViewController.h; path = ../PDFListTableViewController.h; sourceTree = "<group>"; };
+		5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFListTableViewController.m; path = ../PDFListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				5B0B919B1973281800336B8B /* AppDelegate.h */,
 				5B0B919C1973281800336B8B /* AppDelegate.m */,
 				5B0B919E1973281800336B8B /* Main.storyboard */,
+				5B97A6AD1974D0370091078D /* PDFViewController.h */,
+				5B97A6AE1974D0370091078D /* PDFViewController.m */,
+				5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */,
+				5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */,
 				5B0B91C1197328B400336B8B /* BrowserViewController.h */,
 				5B0B91C2197328B400336B8B /* BrowserViewController.m */,
 				5B0B91A11973281800336B8B /* ViewController.h */,
@@ -255,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0B91A31973281800336B8B /* ViewController.m in Sources */,
+				5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */,
+				5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */,
 				5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */,
 				5B0B919D1973281800336B8B /* AppDelegate.m in Sources */,
 				5B0B91991973281800336B8B /* main.m in Sources */,
@@ -462,6 +474,7 @@
 				5B0B91BD1973281800336B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B0B91BE1973281800336B8B /* Build configuration list for PBXNativeTarget "PDFDownloaderTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +483,7 @@
 				5B0B91C01973281800336B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

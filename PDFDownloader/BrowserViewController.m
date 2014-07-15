@@ -31,6 +31,17 @@
     [self loadRequestFromString:@"https://www.google.com"];
     [_loadingIndicator startAnimating];
     
+    NSError *error = nil;
+    
+    NSString *yourFolderPath = [[NSString alloc] initWithString:[
+                                                                 [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
+                                                                 stringByAppendingPathComponent:@"Documents"
+                                                                 ]];
+    
+    NSArray  *yourFolderContents = [[NSFileManager defaultManager]
+                                    contentsOfDirectoryAtPath:yourFolderPath error:&error];
+    NSLog(@"Number of shows: %lu", (unsigned long)[yourFolderContents count]);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,5 +68,55 @@
     NSLog(@"Web View was loaded");
     [_loadingIndicator stopAnimating];
     _loadingIndicator.hidden = YES;
+    
+   // NSLog(_webView.request.URL.absoluteString);
+    _urltextbox.text = _webView.request.URL.absoluteString;
+}
+
+
+- (IBAction)savePDF:(id)sender {
+    
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Name" message:@"Enter name for Document" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView show];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UITextField *name = [alertView textFieldAtIndex:0];
+    NSLog(@"%@",name.text);
+    
+    // Get the PDF Data from the url in a NSData Object
+    NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[
+                                                             NSURL URLWithString:_webView.request.URL.absoluteString]];
+    // Store the Data locally as PDF File
+    NSString *resourceDocPath = [[NSString alloc] initWithString:[
+                                                                  [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
+                                                                  stringByAppendingPathComponent:@"Documents"
+                                                                  ]];
+    NSString *filePath = [resourceDocPath
+                          stringByAppendingPathComponent:[name.text stringByAppendingString:@".pdf"]];
+    [pdfData writeToFile:filePath atomically:YES];
+    
+    // Now create Request for the file that was saved in your documents folder
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [_webView setUserInteractionEnabled:YES];
+    [_webView setDelegate:self];
+    [_webView loadRequest:requestObj];
+}
+
+- (IBAction)back:(id)sender {
+    
+    if ([_webView canGoBack]) {
+        [_webView goBack];
+    }
+    
+}
+
+- (IBAction)refresh:(id)sender {
+    [_webView reload];
 }
 @end

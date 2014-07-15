@@ -14,5 +14,11 @@
 - (IBAction)goToURL:(id)sender;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+- (IBAction)savePDF:(id)sender;
+
+//Web Methods
+
+- (IBAction)back:(id)sender;
+- (IBAction)refresh:(id)sender;
 
 @end
