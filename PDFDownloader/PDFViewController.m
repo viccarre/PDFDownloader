@@ -87,34 +87,4 @@
 }
 */
 
-- (IBAction)delete:(id)sender {
-    
-NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSError *error = nil;
-    
-    NSString *yourFolderPath = [[NSString alloc] initWithString:[
-                                                                 [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                 stringByAppendingPathComponent:@"Documents"
-                                                                 ]];
-    
-    NSArray  *yourFolderContents = [[NSFileManager defaultManager]
-                                    contentsOfDirectoryAtPath:yourFolderPath error:&error];
-    
-    NSString *resourceDocPath = [[NSString alloc] initWithString:[
-                                                                  [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                  stringByAppendingPathComponent:@"Documents"
-                                                                  ]];
-    NSString *filePath = [resourceDocPath
-                          stringByAppendingPathComponent:[yourFolderContents objectAtIndex:_detailItem.row]];
-    
-    
-    
-    [fileManager removeItemAtPath:filePath error:&error];
-    if (error){
-        NSLog(@"%@", error);
-    }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
 @end

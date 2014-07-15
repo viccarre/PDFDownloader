@@ -178,10 +178,6 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Doy-RH-r3O">
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Delete"/>
-                                <connections>
-                                    <action selector="delete:" destination="wH6-OR-eaB" eventType="touchUpInside" id="aKx-05-pCM"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

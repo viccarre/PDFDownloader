@@ -10,7 +10,7 @@
 
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) NSArray  *yourFolderContents;
+@property (nonatomic, retain) NSMutableArray  *yourFolderContents;
 @property (strong, nonatomic) IBOutlet UITableView *currenTableView;
 
 @end
