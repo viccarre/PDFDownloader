@@ -11,5 +11,6 @@
 @interface PDFViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSIndexPath *detailItem;
+- (IBAction)delete:(id)sender;
 
 @end

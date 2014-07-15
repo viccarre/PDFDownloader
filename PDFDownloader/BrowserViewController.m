@@ -42,7 +42,9 @@
                                     contentsOfDirectoryAtPath:yourFolderPath error:&error];
     NSLog(@"Number of shows: %lu", (unsigned long)[yourFolderContents count]);
     
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -76,10 +78,11 @@
 
 - (IBAction)savePDF:(id)sender {
     
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Name" message:@"Enter name for Document" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Enter name for Document" message:@"Make sure to save a PDF file." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];
+    
+
     
 }
 
@@ -100,12 +103,6 @@
                           stringByAppendingPathComponent:[name.text stringByAppendingString:@".pdf"]];
     [pdfData writeToFile:filePath atomically:YES];
     
-    // Now create Request for the file that was saved in your documents folder
-    NSURL *url = [NSURL fileURLWithPath:filePath];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [_webView setUserInteractionEnabled:YES];
-    [_webView setDelegate:self];
-    [_webView loadRequest:requestObj];
 }
 
 - (IBAction)back:(id)sender {

@@ -24,6 +24,7 @@
 		5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91C2197328B400336B8B /* BrowserViewController.m */; };
 		5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6AE1974D0370091078D /* PDFViewController.m */; };
 		5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */; };
+		5B97A6B81974F8DA0091078D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6B71974F8DA0091078D /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		5B97A6AE1974D0370091078D /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
 		5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFListTableViewController.h; path = ../PDFListTableViewController.h; sourceTree = "<group>"; };
 		5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFListTableViewController.m; path = ../PDFListTableViewController.m; sourceTree = "<group>"; };
+		5B97A6B61974F8DA0091078D /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		5B97A6B71974F8DA0091078D /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				5B0B919B1973281800336B8B /* AppDelegate.h */,
 				5B0B919C1973281800336B8B /* AppDelegate.m */,
 				5B0B919E1973281800336B8B /* Main.storyboard */,
+				5B97A6B61974F8DA0091078D /* ListViewController.h */,
+				5B97A6B71974F8DA0091078D /* ListViewController.m */,
 				5B97A6AD1974D0370091078D /* PDFViewController.h */,
 				5B97A6AE1974D0370091078D /* PDFViewController.m */,
 				5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */,
@@ -266,6 +271,7 @@
 			files = (
 				5B0B91A31973281800336B8B /* ViewController.m in Sources */,
 				5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */,
+				5B97A6B81974F8DA0091078D /* ListViewController.m in Sources */,
 				5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */,
 				5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */,
 				5B0B919D1973281800336B8B /* AppDelegate.m in Sources */,

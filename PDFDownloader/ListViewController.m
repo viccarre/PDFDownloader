@@ -1,23 +1,23 @@
 //
-//  PDFListTableViewController.m
+//  ListViewController.m
 //  PDFDownloader
 //
-//  Created by Victor Carreño on 7/14/14.
+//  Created by Victor Carreño on 7/15/14.
 //  Copyright (c) 2014 Victor Carreño. All rights reserved.
 //
 
-#import "PDFListTableViewController.h"
+#import "ListViewController.h"
 #import "PDFViewController.h"
 
-@interface PDFListTableViewController ()
+@interface ListViewController ()
 
 @end
 
-@implementation PDFListTableViewController
+@implementation ListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view.
     NSError *error = nil;
     
     NSString *yourFolderPath = [[NSString alloc] initWithString:[
@@ -36,8 +36,7 @@
                                                                  ]];
     
     _yourFolderContents = [[NSFileManager defaultManager]
-                                    contentsOfDirectoryAtPath:yourFolderPath error:&error];
-
+                           contentsOfDirectoryAtPath:yourFolderPath error:&error];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,8 +44,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -63,13 +60,12 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [_currenTableView reloadData];
-    [self.tableView reloadData];
 
 }
 
+
 -(void)viewDidAppear:(BOOL)animated{
     [_currenTableView reloadData];
-    [self.tableView reloadData];
     
 }
 
@@ -79,7 +75,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-
+    
     cell.textLabel.text = [_yourFolderContents objectAtIndex:indexPath.row];
     
     return cell;
@@ -92,12 +88,11 @@
         
         PDFViewController *detaildestination = [segue destinationViewController];
         
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [_currenTableView indexPathForSelectedRow];
         
         [detaildestination setDetailItem:indexPath];
         
     }
 }
-
 
 @end
