@@ -14,7 +14,6 @@
 		5B0B91991973281800336B8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91981973281800336B8B /* main.m */; };
 		5B0B919D1973281800336B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B919C1973281800336B8B /* AppDelegate.m */; };
 		5B0B91A01973281800336B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B919E1973281800336B8B /* Main.storyboard */; };
-		5B0B91A31973281800336B8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91A21973281800336B8B /* ViewController.m */; };
 		5B0B91A51973281800336B8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B91A41973281800336B8B /* Images.xcassets */; };
 		5B0B91AC1973281800336B8B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B91AB1973281800336B8B /* XCTest.framework */; };
 		5B0B91AD1973281800336B8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B918C1973281800336B8B /* Foundation.framework */; };
@@ -23,7 +22,6 @@
 		5B0B91B81973281800336B8B /* PDFDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91B71973281800336B8B /* PDFDownloaderTests.m */; };
 		5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B91C2197328B400336B8B /* BrowserViewController.m */; };
 		5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6AE1974D0370091078D /* PDFViewController.m */; };
-		5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */; };
 		5B97A6B81974F8DA0091078D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97A6B71974F8DA0091078D /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +47,6 @@
 		5B0B919B1973281800336B8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0B919C1973281800336B8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B0B919F1973281800336B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B0B91A11973281800336B8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B0B91A21973281800336B8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B0B91A41973281800336B8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5B0B91AA1973281800336B8B /* PDFDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0B91AB1973281800336B8B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,8 +57,6 @@
 		5B0B91C2197328B400336B8B /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		5B97A6AD1974D0370091078D /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
 		5B97A6AE1974D0370091078D /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
-		5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFListTableViewController.h; path = ../PDFListTableViewController.h; sourceTree = "<group>"; };
-		5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFListTableViewController.m; path = ../PDFListTableViewController.m; sourceTree = "<group>"; };
 		5B97A6B61974F8DA0091078D /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		5B97A6B71974F8DA0091078D /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,12 +125,8 @@
 				5B97A6B71974F8DA0091078D /* ListViewController.m */,
 				5B97A6AD1974D0370091078D /* PDFViewController.h */,
 				5B97A6AE1974D0370091078D /* PDFViewController.m */,
-				5B97A6B01974D2DB0091078D /* PDFListTableViewController.h */,
-				5B97A6B11974D2DB0091078D /* PDFListTableViewController.m */,
 				5B0B91C1197328B400336B8B /* BrowserViewController.h */,
 				5B0B91C2197328B400336B8B /* BrowserViewController.m */,
-				5B0B91A11973281800336B8B /* ViewController.h */,
-				5B0B91A21973281800336B8B /* ViewController.m */,
 				5B0B91A41973281800336B8B /* Images.xcassets */,
 				5B0B91931973281800336B8B /* Supporting Files */,
 			);
@@ -269,10 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B0B91A31973281800336B8B /* ViewController.m in Sources */,
 				5B97A6AF1974D0370091078D /* PDFViewController.m in Sources */,
 				5B97A6B81974F8DA0091078D /* ListViewController.m in Sources */,
-				5B97A6B21974D2DB0091078D /* PDFListTableViewController.m in Sources */,
 				5B0B91C3197328B400336B8B /* BrowserViewController.m in Sources */,
 				5B0B919D1973281800336B8B /* AppDelegate.m in Sources */,
 				5B0B91991973281800336B8B /* main.m in Sources */,

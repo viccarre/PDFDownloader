@@ -1,6 +1,6 @@
 PDFDownloader
 =============
 
-This is a simple web browser that can also store and view PDF's on the local file system. You can navigate the mini-browser, when you find a PDF that you want to save press "save", write your name and save it. You can view your saved PDF’s.
+PDF Downloader is a Open Source App where you can store PDFs. The app is built in a web browser very simple to use. You just need to search the file you are looking  for (using Google) and then press "save", create a name for the file and then the file will be available in the local file system of the app. 
 
-Requires Xcode 5 and iOS 7.
+Requires Xcode 5 and iOS 7. Currently iOS 8 is not supported.

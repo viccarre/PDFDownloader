@@ -82,8 +82,6 @@
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];
     
-
-    
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
