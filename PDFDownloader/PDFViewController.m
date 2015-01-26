@@ -28,46 +28,26 @@
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
-        // Update the view.
-        //[self configureView];
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSError *error = nil;
-    
-    NSString *yourFolderPath = [[NSString alloc] initWithString:[
-                                                                 [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                 stringByAppendingPathComponent:@"Documents"
-                                                                 ]];
-    
-    NSArray  *yourFolderContents = [[NSFileManager defaultManager]
-                                    contentsOfDirectoryAtPath:yourFolderPath error:&error];
-    
-    NSString *resourceDocPath = [[NSString alloc] initWithString:[
-                                                                  [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                  stringByAppendingPathComponent:@"Documents"
-                                                                  ]];
-    NSString *filePath = [resourceDocPath
-                          stringByAppendingPathComponent:[yourFolderContents objectAtIndex:_detailItem.row]];
+    //Creating file manager and file path
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSArray *resultArray = [fileManager subpathsOfDirectoryAtPath:documentsDirectory error:nil];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:[resultArray objectAtIndex:_detailItem.row]];
     
     // Now create Request for the file that was saved in your documents folder
+
     NSURL *url = [NSURL fileURLWithPath:filePath];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [_webView setUserInteractionEnabled:YES];
     [_webView setDelegate:self];
     [_webView loadRequest:requestObj];
     
-
-    
-    
-    NSLog(@"Number of shows: %lu", (unsigned long)[yourFolderContents count]);
-    
-    
-    NSLog(@"%ld", (long)_detailItem.row);
 }
 
 - (void)didReceiveMemoryWarning

@@ -31,17 +31,11 @@
     [self loadRequestFromString:@"https://www.google.com"];
     [_loadingIndicator startAnimating];
     
-    NSError *error = nil;
-    
-    NSString *yourFolderPath = [[NSString alloc] initWithString:[
-                                                                 [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                 stringByAppendingPathComponent:@"Documents"
-                                                                 ]];
-    
-    NSArray  *yourFolderContents = [[NSFileManager defaultManager]
-                                    contentsOfDirectoryAtPath:yourFolderPath error:&error];
-    NSLog(@"Number of shows: %lu", (unsigned long)[yourFolderContents count]);
-    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSArray *resultArray = [fileManager subpathsOfDirectoryAtPath:documentsDirectory error:nil];
+    NSLog(@"Array: %@",resultArray);
+    NSLog(@"Number of shows New: %lu", (unsigned long)[resultArray count]);
     
 }
 
@@ -92,14 +86,18 @@
     // Get the PDF Data from the url in a NSData Object
     NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[
                                                              NSURL URLWithString:_webView.request.URL.absoluteString]];
+    
     // Store the Data locally as PDF File
-    NSString *resourceDocPath = [[NSString alloc] initWithString:[
-                                                                  [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                  stringByAppendingPathComponent:@"Documents"
-                                                                  ]];
-    NSString *filePath = [resourceDocPath
-                          stringByAppendingPathComponent:[name.text stringByAppendingString:@".pdf"]];
-    [pdfData writeToFile:filePath atomically:YES];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *newFilePath = [documentsDirectory stringByAppendingPathComponent:[name.text stringByAppendingString:@".pdf"]];
+    NSError *error;
+    if ([fileManager createFileAtPath:newFilePath contents:pdfData attributes:nil]){
+        NSLog(@"Create Sucess");
+    }
+    else{
+        NSLog(@"Create error: %@", error);
+    }
     
 }
 
@@ -114,4 +112,5 @@
 - (IBAction)refresh:(id)sender {
     [_webView reload];
 }
+
 @end

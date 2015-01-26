@@ -27,16 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSError *error = nil;
     
-    NSString *yourFolderPath = [[NSString alloc] initWithString:[
-                                                                 [[[NSBundle mainBundle] resourcePath] stringByDeletingLastPathComponent]
-                                                                 stringByAppendingPathComponent:@"Documents"
-                                                                 ]];
-    
-    _yourFolderContents = [[NSFileManager defaultManager]
-                           contentsOfDirectoryAtPath:yourFolderPath error:&error];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    _yourFolderContents = [fileManager subpathsOfDirectoryAtPath:documentsDirectory error:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,11 +115,7 @@
         NSString *filePath = [resourceDocPath
                               stringByAppendingPathComponent:[yourFolderContents objectAtIndex:indexPath.row]];
         
-        
-        
-        
-        
-        
+
         if (error){
             NSLog(@"%@", error);
         }
